@@ -7,6 +7,38 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Self-contained hero — does not depend on style.css, so it always displays correctly */
+  .page-hero {
+    background: linear-gradient(135deg, #6C2BD9 0%, #FF4B3E 100%);
+    padding: 9rem 1.5rem 4rem;
+    text-align: center;
+  }
+  .page-hero-inner { max-width: 700px; margin: 0 auto; }
+  .page-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFC53D;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+  .page-title {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1rem;
+  }
+  .page-sub {
+    color: rgba(255,255,255,0.92);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0;
+  }
+</style>
 </head>
 <body>
 
@@ -28,11 +60,11 @@
     </div>
   </header>
 
-  <section class="gallery-hero">
-    <div class="gallery-hero-inner">
-      <p class="eyebrow">Private Dining</p>
-      <h1 class="section-title gallery-title">Host Your Celebration</h1>
-      <p class="gallery-sub">From birthdays to corporate dinners, we set aside the room and let the oven do the rest.</p>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-eyebrow">Private Dining</p>
+      <h1 class="page-title">Host Your Celebration</h1>
+      <p class="page-sub">From birthdays to corporate dinners, we set aside the room and let the oven do the rest.</p>
     </div>
   </section>
 
@@ -88,7 +120,7 @@
 
       </div>
 
-      <div class="gallery-cta">
+      <div style="text-align:center; margin-top:3.5rem;">
         <a href="index.html#reserve" class="btn btn-primary">Enquire about your event</a>
       </div>
     </div>
