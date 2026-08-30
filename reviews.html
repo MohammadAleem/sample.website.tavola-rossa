@@ -19,16 +19,47 @@
   }
   .review-card {
     background: #fff;
-    border: 3px solid var(--ink);
+    border: 3px solid #1C1128;
     border-radius: 16px;
     padding: 1.6rem;
-    box-shadow: 5px 5px 0 var(--ink);
+    box-shadow: 5px 5px 0 #1C1128;
   }
-  .review-stars { color: var(--yellow); font-size: 1.1rem; letter-spacing: 0.15em; margin-bottom: 0.8rem; }
-  .review-quote { font-family: var(--display); font-size: 1.05rem; font-weight: 500; line-height: 1.5; margin-bottom: 1rem; }
-  .review-name { font-family: var(--body); font-weight: 700; font-size: 0.9rem; color: var(--coral-dark); }
-  .review-role { font-size: 0.8rem; opacity: 0.6; }
+  .review-stars { color: #FFC53D; font-size: 1.1rem; letter-spacing: 0.15em; margin-bottom: 0.8rem; }
+  .review-quote { font-family: 'Baloo 2', sans-serif; font-size: 1.05rem; font-weight: 500; line-height: 1.5; margin-bottom: 1rem; color: #1C1128; }
+  .review-name { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.9rem; color: #E5342A; }
+  .review-role { font-size: 0.8rem; opacity: 0.6; color: #1C1128; }
   @media (max-width: 800px) { .reviews-grid { grid-template-columns: 1fr; } }
+
+  /* Self-contained hero — does not depend on style.css, so it always displays correctly */
+  .page-hero {
+    background: linear-gradient(135deg, #6C2BD9 0%, #FF4B3E 100%);
+    padding: 9rem 1.5rem 4rem;
+    text-align: center;
+  }
+  .page-hero-inner { max-width: 700px; margin: 0 auto; }
+  .page-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFC53D;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+  .page-title {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1rem;
+  }
+  .page-sub {
+    color: rgba(255,255,255,0.92);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0;
+  }
 </style>
 </head>
 <body>
@@ -51,11 +82,11 @@
     </div>
   </header>
 
-  <section class="gallery-hero">
-    <div class="gallery-hero-inner">
-      <p class="eyebrow">What people say</p>
-      <h1 class="section-title gallery-title">Reviews & Stories</h1>
-      <p class="gallery-sub">A few notes from regulars and first-timers alike.</p>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-eyebrow">What people say</p>
+      <h1 class="page-title">Reviews & Stories</h1>
+      <p class="page-sub">A few notes from regulars and first-timers alike.</p>
     </div>
   </section>
 
