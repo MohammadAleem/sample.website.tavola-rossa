@@ -7,6 +7,89 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Fully self-contained page — does not depend on style.css beyond fonts/nav, so it always displays correctly */
+
+  .page-hero {
+    background: linear-gradient(135deg, #6C2BD9 0%, #FF4B3E 100%);
+    padding: 9rem 1.5rem 4rem;
+    text-align: center;
+  }
+  .page-hero-inner { max-width: 700px; margin: 0 auto; }
+  .page-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFC53D;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+  .page-title {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1rem;
+  }
+  .page-sub {
+    color: rgba(255,255,255,0.92);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .gallery-wrap { background: #FFF8EE; padding: 4rem 1.5rem 6rem; }
+  .gallery-inner { max-width: 1160px; margin: 0 auto; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  /* Fixed square frame — every photo is forced to the same size, cropped to fit, never stretched */
+  .gallery-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid #1C1128;
+    box-shadow: 5px 5px 0 #1C1128;
+    background: linear-gradient(135deg, #6C2BD9, #FF4B3E);
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  .gallery-fallback {
+    display: none;
+    width: 100%; height: 100%;
+    align-items: center; justify-content: center;
+    font-size: 3rem;
+  }
+  .gallery-item.img-error img { display: none; }
+  .gallery-item.img-error .gallery-fallback { display: flex; }
+  .gallery-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(28,17,40,0.75);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.6rem 0.8rem;
+    text-align: center;
+  }
+  .gallery-cta { text-align: center; margin-top: 3.5rem; }
+
+  @media (max-width: 900px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
 </head>
 <body>
 
@@ -14,11 +97,12 @@
     <div class="nav-inner">
       <a href="index.html" class="brand">Tavola <span>Rossa</span></a>
       <nav class="nav-links">
-        <a href="index.html#story">Story</a>
         <a href="index.html#menu">Menu</a>
         <a href="gallery.html">Gallery</a>
         <a href="about.html">About</a>
-        <a href="index.html#visit">Visit</a>
+        <a href="events.html">Events</a>
+        <a href="faq.html">FAQ</a>
+        <a href="reviews.html">Reviews</a>
         <a href="index.html#reserve" class="nav-cta">Reserve</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu">
@@ -27,15 +111,15 @@
     </div>
   </header>
 
-  <section class="gallery-hero">
-    <div class="gallery-hero-inner">
-      <p class="eyebrow">A peek inside</p>
-      <h1 class="section-title gallery-title">From Our Kitchen</h1>
-      <p class="gallery-sub">Every dish, hand-made, fresh from the wood oven. Here's what's coming out tonight.</p>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-eyebrow">A peek inside</p>
+      <h1 class="page-title">From Our Kitchen</h1>
+      <p class="page-sub">Every dish, hand-made, fresh from the wood oven. Here's what's coming out tonight.</p>
     </div>
   </section>
 
-  <section class="gallery">
+  <section class="gallery-wrap">
     <div class="gallery-inner">
       <div class="gallery-grid">
 
