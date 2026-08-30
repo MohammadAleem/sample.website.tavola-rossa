@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Tavola Rossa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Tavola <span>Rossa</span></a>
+      <nav class="nav-links">
+        <a href="index.html#story">Story</a>
+        <a href="index.html#menu">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="index.html#visit">Visit</a>
+        <a href="index.html#reserve" class="nav-cta">Reserve</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="gallery-hero">
+    <div class="gallery-hero-inner">
+      <p class="eyebrow">A peek inside</p>
+      <h1 class="section-title gallery-title">From Our Kitchen</h1>
+      <p class="gallery-sub">Every dish, hand-made, fresh from the wood oven. Here's what's coming out tonight.</p>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="gallery-inner">
+      <div class="gallery-grid">
+
+        <div class="gallery-item">
+          <img src="images/burrata.jpg" alt="Burrata al Forno">
+          <div class="gallery-fallback">🧀</div>
+          <span class="gallery-caption">Burrata al Forno</span>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/margherita.jpg" alt="Margherita Pizza">
+          <div class="gallery-fallback">🍕</div>
+          <span class="gallery-caption">Margherita</span>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/pappardelle.jpg" alt="Pappardelle al Cinghiale">
+          <div class="gallery-fallback">🍜</div>
+          <span class="gallery-caption">Pappardelle al Cinghiale</span>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/nduja.jpg" alt="Nduja e Miele Pizza">
+          <div class="gallery-fallback">🌶️</div>
+          <span class="gallery-caption">Nduja e Miele</span>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/arancini.jpg" alt="Arancini">
+          <div class="gallery-fallback">🍙</div>
+          <span class="gallery-caption">Arancini</span>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/branzino.jpg" alt="Branzino al Sale">
+          <div class="gallery-fallback">🐟</div>
+          <span class="gallery-caption">Branzino al Sale</span>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/tiramisu.jpg" alt="Tiramisu della Casa">
+          <div class="gallery-fallback">🍰</div>
+          <span class="gallery-caption">Tiramisu della Casa</span>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/panna-cotta.jpg" alt="Panna Cotta al Limone">
+          <div class="gallery-fallback">🍮</div>
+          <span class="gallery-caption">Panna Cotta al Limone</span>
+        </div>
+
+      </div>
+
+      <div class="gallery-cta">
+        <a href="index.html#reserve" class="btn btn-primary">Reserve a table</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Tavola Rossa. Portfolio demo &mdash; built as a sample project, not a real restaurant.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
