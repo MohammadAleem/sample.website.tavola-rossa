@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Tavola Rossa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Page-specific accordion styling — scoped to this file only, uses the color variables from style.css */
+  .faq-list { max-width: 760px; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  .faq-item {
+    background: #fff;
+    border: 3px solid var(--ink);
+    border-radius: 14px;
+    margin-bottom: 1.1rem;
+    box-shadow: 4px 4px 0 var(--ink);
+    overflow: hidden;
+  }
+  .faq-item summary {
+    padding: 1.1rem 1.4rem;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: var(--coral);
+    font-weight: 700;
+    margin-left: 1rem;
+  }
+  .faq-item[open] summary::after { content: '–'; }
+  .faq-item p {
+    padding: 0 1.4rem 1.3rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink);
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Tavola <span>Rossa</span></a>
+      <nav class="nav-links">
+        <a href="index.html#menu">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="faq.html">FAQ</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="index.html#reserve" class="nav-cta">Reserve</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="gallery-hero">
+    <div class="gallery-hero-inner">
+      <p class="eyebrow">Good to know</p>
+      <h1 class="section-title gallery-title">Frequently Asked</h1>
+      <p class="gallery-sub">Everything people usually ask before their first visit.</p>
+    </div>
+  </section>
+
+  <section class="faq-list">
+
+    <details class="faq-item">
+      <summary>Do you take walk-ins, or is it reservation only?</summary>
+      <p>Walk-ins are welcome, but tables fill fast on weekends. We'd recommend reserving ahead for Friday and Saturday nights to avoid a wait.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you have vegetarian or vegan options?</summary>
+      <p>Yes — several vegetarian dishes are marked on the menu. For vegan requests, let our staff know when you order and the kitchen can adjust most pasta and pizza dishes.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is parking available?</summary>
+      <p>There's free street parking along Fornace Lane, and a paid parking lot two minutes' walk from the entrance.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Can you accommodate large groups?</summary>
+      <p>For groups above 8, we recommend calling ahead so we can prepare a table setup in advance. For anything above 12, check our <a href="events.html">Events page</a> for private dining options.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is there a dress code?</summary>
+      <p>Smart casual is fine. No strict dress code, but we'd suggest avoiding beachwear for the evening seating.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you offer delivery or takeaway?</summary>
+      <p>Currently dine-in only. We're a small kitchen and prefer every dish leaves the oven straight to your table.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Can I book the entire restaurant for a private event?</summary>
+      <p>Yes — full buyouts are available for weddings, engagements, and large corporate events. See the <a href="events.html">Events & Private Dining</a> page for packages and pricing.</p>
+    </details>
+
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Tavola Rossa. Portfolio demo &mdash; built as a sample project, not a real restaurant.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events & Private Dining — Tavola Rossa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Tavola <span>Rossa</span></a>
+      <nav class="nav-links">
+        <a href="index.html#menu">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="faq.html">FAQ</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="index.html#reserve" class="nav-cta">Reserve</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="gallery-hero">
+    <div class="gallery-hero-inner">
+      <p class="eyebrow">Private Dining</p>
+      <h1 class="section-title gallery-title">Host Your Celebration</h1>
+      <p class="gallery-sub">From birthdays to corporate dinners, we set aside the room and let the oven do the rest.</p>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="story-inner">
+      <div class="story-tag">How it works</div>
+      <p class="story-text">Tell us the headcount and the occasion, we build a set menu around it. Every package includes a tasting call with the chef beforehand, so there are no surprises on the night.</p>
+    </div>
+  </section>
+
+  <section class="menu">
+    <div class="menu-inner">
+      <p class="eyebrow eyebrow-dark">Packages</p>
+      <h2 class="section-title">Pick Your Occasion</h2>
+
+      <div class="menu-grid">
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/event-birthday.jpg" alt="Birthday Package">
+            <div class="dish-fallback">🎉</div>
+            <span class="badge badge-yellow">Up to 12 guests</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Birthday Package</h3><span class="price">From ₹15,000</span></div>
+            <p class="dish-desc">Private corner table, custom dessert plate, wood-fired centerpiece pizza board for the table.</p>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/event-corporate.jpg" alt="Corporate Dinner Package">
+            <div class="dish-fallback">🥂</div>
+            <span class="badge badge-teal">Up to 30 guests</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Corporate Dinner</h3><span class="price">From ₹25,000</span></div>
+            <p class="dish-desc">Semi-private room buyout, fixed set menu, dedicated service staff for the evening.</p>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/event-wedding.jpg" alt="Wedding and Engagement Package">
+            <div class="dish-fallback">💍</div>
+            <span class="badge badge-coral">Full buyout</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Wedding & Engagement</h3><span class="price">From ₹60,000</span></div>
+            <p class="dish-desc">Whole restaurant reserved, custom multi-course menu, complimentary tasting session included.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="gallery-cta">
+        <a href="index.html#reserve" class="btn btn-primary">Enquire about your event</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Tavola Rossa. Portfolio demo &mdash; built as a sample project, not a real restaurant.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

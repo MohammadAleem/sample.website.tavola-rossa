@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviews — Tavola Rossa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Page-specific review card styling — scoped to this file only, uses colors from style.css */
+  .reviews-grid {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+  }
+  .review-card {
+    background: #fff;
+    border: 3px solid var(--ink);
+    border-radius: 16px;
+    padding: 1.6rem;
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .review-stars { color: var(--yellow); font-size: 1.1rem; letter-spacing: 0.15em; margin-bottom: 0.8rem; }
+  .review-quote { font-family: var(--display); font-size: 1.05rem; font-weight: 500; line-height: 1.5; margin-bottom: 1rem; }
+  .review-name { font-family: var(--body); font-weight: 700; font-size: 0.9rem; color: var(--coral-dark); }
+  .review-role { font-size: 0.8rem; opacity: 0.6; }
+  @media (max-width: 800px) { .reviews-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Tavola <span>Rossa</span></a>
+      <nav class="nav-links">
+        <a href="index.html#menu">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="faq.html">FAQ</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="index.html#reserve" class="nav-cta">Reserve</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="gallery-hero">
+    <div class="gallery-hero-inner">
+      <p class="eyebrow">What people say</p>
+      <h1 class="section-title gallery-title">Reviews & Stories</h1>
+      <p class="gallery-sub">A few notes from regulars and first-timers alike.</p>
+    </div>
+  </section>
+
+  <section class="reviews-grid">
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-quote">"The pappardelle alone is worth the drive across town. Six-hour ragu, and you can tell."</p>
+      <p class="review-name">Ananya R.</p>
+      <p class="review-role">Regular, since 2022</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-quote">"Booked the corporate package for a 20-person dinner. Zero stress, the team handled everything."</p>
+      <p class="review-name">Karthik M.</p>
+      <p class="review-role">Corporate event guest</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★☆</div>
+      <p class="review-quote">"Small menu, but everything on it is done properly. The burrata is unreal. Gets busy on weekends though."</p>
+      <p class="review-name">Priya S.</p>
+      <p class="review-role">First-time visitor</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-quote">"Had our engagement dinner here — full buyout. The chef came out and walked us through the tasting menu himself."</p>
+      <p class="review-name">Farhan & Zoya</p>
+      <p class="review-role">Wedding package guests</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-quote">"Wood-fired pizza that actually tastes wood-fired, not just labeled that way. The nduja and honey combo is dangerous."</p>
+      <p class="review-name">Vikram T.</p>
+      <p class="review-role">Regular, since 2021</p>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Tavola Rossa. Portfolio demo &mdash; built as a sample project, not a real restaurant. Reviews shown are illustrative sample content, not real customer submissions.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
