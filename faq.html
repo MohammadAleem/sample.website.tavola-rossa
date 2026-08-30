@@ -12,10 +12,10 @@
   .faq-list { max-width: 760px; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
   .faq-item {
     background: #fff;
-    border: 3px solid var(--ink);
+    border: 3px solid #1C1128;
     border-radius: 14px;
     margin-bottom: 1.1rem;
-    box-shadow: 4px 4px 0 var(--ink);
+    box-shadow: 4px 4px 0 #1C1128;
     overflow: hidden;
   }
   .faq-item summary {
@@ -33,7 +33,7 @@
   .faq-item summary::after {
     content: '+';
     font-size: 1.4rem;
-    color: var(--coral);
+    color: #FF4B3E;
     font-weight: 700;
     margin-left: 1rem;
   }
@@ -42,8 +42,38 @@
     padding: 0 1.4rem 1.3rem;
     font-size: 0.95rem;
     line-height: 1.6;
-    color: var(--ink);
+    color: #1C1128;
     opacity: 0.8;
+  }
+  /* Self-contained hero — does not depend on style.css, so it always displays correctly */
+  .page-hero {
+    background: linear-gradient(135deg, #6C2BD9 0%, #FF4B3E 100%);
+    padding: 9rem 1.5rem 4rem;
+    text-align: center;
+  }
+  .page-hero-inner { max-width: 700px; margin: 0 auto; }
+  .page-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFC53D;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+  .page-title {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1rem;
+  }
+  .page-sub {
+    color: rgba(255,255,255,0.92);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0;
   }
 </style>
 </head>
@@ -67,11 +97,11 @@
     </div>
   </header>
 
-  <section class="gallery-hero">
-    <div class="gallery-hero-inner">
-      <p class="eyebrow">Good to know</p>
-      <h1 class="section-title gallery-title">Frequently Asked</h1>
-      <p class="gallery-sub">Everything people usually ask before their first visit.</p>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-eyebrow">Good to know</p>
+      <h1 class="page-title">Frequently Asked</h1>
+      <p class="page-sub">Everything people usually ask before their first visit.</p>
     </div>
   </section>
 
