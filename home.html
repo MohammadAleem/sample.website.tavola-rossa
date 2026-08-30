@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tavola Rossa — Wood-Fired Trattoria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">Tavola <span>Rossa</span></a>
+      <nav class="nav-links">
+        <a href="#story">Story</a>
+        <a href="#menu">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#visit">Visit</a>
+        <a href="#reserve" class="nav-cta">Reserve</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-blob blob-1" aria-hidden="true"></div>
+    <div class="hero-blob blob-2" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">Est. 1987 &middot; Naples-style, made by hand</p>
+      <h1 class="hero-title">Wood-fired.<br>Hand-rolled.<br><span class="hl">Every night.</span></h1>
+      <p class="hero-sub">A neighborhood trattoria where the oven never goes cold and the pasta never comes from a box.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">See the menu</a>
+        <a href="#reserve" class="btn btn-ghost">Reserve a table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story" id="story">
+    <div class="story-inner">
+      <div class="story-tag">Our story</div>
+      <p class="story-text">Tavola Rossa started as a single wood oven in a rented kitchen and a family recipe book held together with tape. Three decades later, the oven is bigger, the book is the same. We still roll the pasta every morning, still char the crust until it blisters, and still close the doors when the flour runs out &mdash; not a minute later.</p>
+      <div class="story-stats">
+        <div><span>38</span>years of one oven</div>
+        <div><span>6am</span>pasta starts rolling</div>
+        <div><span>0</span>shortcuts taken</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="menu-inner">
+      <p class="eyebrow eyebrow-dark">The Menu</p>
+      <h2 class="section-title">Tonight's Table</h2>
+
+      <div class="menu-grid">
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/burrata.jpg" alt="Burrata al Forno">
+            <div class="dish-fallback">🧀</div>
+            <span class="badge badge-yellow">Bestseller</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Burrata al Forno</h3><span class="price">₹340</span></div>
+            <p class="dish-desc">Roasted burrata, blistered cherry tomato, basil oil, grilled bread</p>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/carpaccio.jpg" alt="Carpaccio di Manzo">
+            <div class="dish-fallback">🥩</div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Carpaccio di Manzo</h3><span class="price">₹420</span></div>
+            <p class="dish-desc">Thin-sliced beef, capers, rocket, aged parmesan, lemon</p>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/arancini.jpg" alt="Arancini">
+            <div class="dish-fallback">🍙</div>
+            <span class="badge badge-teal">Veg</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Arancini</h3><span class="price">₹280</span></div>
+            <p class="dish-desc">Saffron risotto balls, mozzarella heart, calabrian chili aioli</p>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/cacio-e-pepe.jpg" alt="Tonnarelli Cacio e Pepe">
+            <div class="dish-fallback">🍝</div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Tonnarelli Cacio e Pepe</h3><span class="price">₹380</span></div>
+            <p class="dish-desc">Black pepper, three aged pecorinos, nothing else</p>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/pappardelle.jpg" alt="Pappardelle al Cinghiale">
+            <div class="dish-fallback">🍜</div>
+            <span class="badge badge-coral">Chef's Pick</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Pappardelle al Cinghiale</h3><span class="price">₹460</span></div>
+            <p class="dish-desc">Wild boar ragu, slow-braised six hours, wide ribbon pasta</p>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/ravioli.jpg" alt="Ravioli di Zucca">
+            <div class="dish-fallback">🥟</div>
+            <span class="badge badge-teal">Veg</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Ravioli di Zucca</h3><span class="price">₹400</span></div>
+            <p class="dish-desc">Roasted pumpkin, sage butter, toasted walnut, nutmeg</p>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/margherita.jpg" alt="Margherita Pizza">
+            <div class="dish-fallback">🍕</div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Margherita</h3><span class="price">₹350</span></div>
+            <p class="dish-desc">San marzano, fior di latte, basil, extra virgin olive oil</p>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/nduja.jpg" alt="Nduja e Miele Pizza">
+            <div class="dish-fallback">🌶️</div>
+            <span class="badge badge-coral">Spicy</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Nduja e Miele</h3><span class="price">₹420</span></div>
+            <p class="dish-desc">Spicy calabrian sausage, whipped ricotta, hot honey</p>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/branzino.jpg" alt="Branzino al Sale">
+            <div class="dish-fallback">🐟</div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Branzino al Sale</h3><span class="price">₹690</span></div>
+            <p class="dish-desc">Whole sea bass baked in a salt crust, cracked tableside</p>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/tiramisu.jpg" alt="Tiramisu della Casa">
+            <div class="dish-fallback">🍰</div>
+            <span class="badge badge-yellow">Bestseller</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Tiramisu della Casa</h3><span class="price">₹260</span></div>
+            <p class="dish-desc">Espresso-soaked savoiardi, mascarpone, cocoa, made daily</p>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo">
+            <img src="images/panna-cotta.jpg" alt="Panna Cotta al Limone">
+            <div class="dish-fallback">🍮</div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-line"><h3>Panna Cotta al Limone</h3><span class="price">₹240</span></div>
+            <p class="dish-desc">Amalfi lemon, candied peel, shortbread crumb</p>
+          </div>
+        </article>
+
+      </div>
+      <p class="menu-note">prices in ₹ &nbsp;&middot;&nbsp; kitchen closes when the flour runs out</p>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="visit" id="visit">
+    <div class="visit-inner">
+      <div class="visit-block">
+        <p class="eyebrow">Visit</p>
+        <h2 class="section-title">Find the Oven</h2>
+        <ul class="hours">
+          <li><span>Tue &ndash; Thu</span><span>6:00 pm &ndash; 11:00 pm</span></li>
+          <li><span>Fri &ndash; Sat</span><span>6:00 pm &ndash; 12:00 am</span></li>
+          <li><span>Sunday</span><span>1:00 pm &ndash; 10:00 pm</span></li>
+          <li><span>Monday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="visit-block">
+        <p class="eyebrow">Address</p>
+        <p class="address">14 Fornace Lane<br>Old Town Quarter<br>Mysuru, Karnataka</p>
+        <p class="eyebrow">Contact</p>
+        <p class="address">+91 00000 00000<br>hello@tavolarossa.example</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVE -->
+  <section class="reserve" id="reserve">
+    <div class="reserve-inner">
+      <p class="eyebrow eyebrow-dark">Reserve</p>
+      <h2 class="section-title">Book a Table</h2>
+      <p class="reserve-sub">This form is a working demo &mdash; it won't send a real booking, but shows exactly how the flow would work for a live restaurant site.</p>
+      <form id="reserveForm" class="reserve-form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your full name" pattern="[A-Za-z\s]+" title="Letters only">
+        </div>
+        <div class="form-row form-row-split">
+          <div>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div>
+            <label for="guests">Guests</label>
+            <select id="guests" name="guests">
+              <option>1</option><option>2</option><option selected>3</option><option>4</option><option>5+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required placeholder="For a confirmation call" inputmode="numeric" pattern="[0-9]{7,15}" title="Numbers only, 7 to 15 digits">
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Confirm reservation</button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Tavola Rossa. Portfolio demo &mdash; built as a sample project, not a real restaurant.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
