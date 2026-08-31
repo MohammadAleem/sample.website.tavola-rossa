@@ -60,6 +60,9 @@
     font-weight: 500;
     margin: 0;
   }
+  /* Scroll-reveal — self-contained, works regardless of style.css version */
+  .fade-up { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.in-view { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
@@ -90,7 +93,7 @@
     </div>
   </section>
 
-  <section class="reviews-grid">
+  <section class="reviews-grid fade-up">
 
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
@@ -134,5 +137,16 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+  </script>
 </body>
 </html>
