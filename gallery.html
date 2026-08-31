@@ -89,6 +89,9 @@
   @media (max-width: 900px) {
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   }
+  /* Scroll-reveal — self-contained, works regardless of style.css version */
+  .fade-up { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.in-view { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
@@ -121,7 +124,7 @@
 
   <section class="gallery-wrap">
     <div class="gallery-inner">
-      <div class="gallery-grid">
+      <div class="gallery-grid fade-up">
 
         <div class="gallery-item">
           <img src="images/burrata.jpg" alt="Burrata al Forno">
@@ -166,7 +169,7 @@
         </div>
 
         <div class="gallery-item">
-          <img src="images/panna-cotta.png" alt="Panna Cotta al Limone">
+          <img src="images/panna-cotta.jpg" alt="Panna Cotta al Limone">
           <div class="gallery-fallback">🍮</div>
           <span class="gallery-caption">Panna Cotta al Limone</span>
         </div>
@@ -184,5 +187,16 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+  </script>
 </body>
 </html>
