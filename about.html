@@ -7,6 +7,40 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #6C2BD9 0%, #FF4B3E 100%);
+    padding: 9rem 1.5rem 4rem;
+    text-align: center;
+  }
+  .page-hero-inner { max-width: 700px; margin: 0 auto; }
+  .page-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFC53D;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+  .page-title {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1rem;
+  }
+  .page-sub {
+    color: rgba(255,255,255,0.92);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0;
+  }
+  /* Scroll-reveal — self-contained, works regardless of style.css version */
+  .fade-up { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.in-view { opacity: 1; transform: translateY(0); }
+</style>
 </head>
 <body>
 
@@ -14,11 +48,13 @@
     <div class="nav-inner">
       <a href="index.html" class="brand">Tavola <span>Rossa</span></a>
       <nav class="nav-links">
-        <a href="index.html#story">Story</a>
+        <a href="index.html">Home</a>
         <a href="index.html#menu">Menu</a>
         <a href="gallery.html">Gallery</a>
         <a href="about.html">About</a>
-        <a href="index.html#visit">Visit</a>
+        <a href="events.html">Events</a>
+        <a href="faq.html">FAQ</a>
+        <a href="reviews.html">Reviews</a>
         <a href="index.html#reserve" class="nav-cta">Reserve</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu">
@@ -27,16 +63,16 @@
     </div>
   </header>
 
-  <section class="gallery-hero">
-    <div class="gallery-hero-inner">
-      <p class="eyebrow">Who we are</p>
-      <h1 class="section-title gallery-title">About Tavola Rossa</h1>
-      <p class="gallery-sub">One oven, one family, no shortcuts — since 1987.</p>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-eyebrow">Who we are</p>
+      <h1 class="page-title">About Tavola Rossa</h1>
+      <p class="page-sub">One oven, one family, no shortcuts — since 1987.</p>
     </div>
   </section>
 
   <section class="story">
-    <div class="story-inner">
+    <div class="story-inner fade-up">
       <div class="story-tag">The kitchen</div>
       <p class="story-text">Tavola Rossa started as a single wood oven in a rented kitchen and a family recipe book held together with tape. Three decades later, the oven is bigger, the book is the same. We still roll the pasta every morning, still char the crust until it blisters, and still close the doors when the flour runs out &mdash; not a minute later.</p>
       <div class="story-stats">
@@ -48,14 +84,14 @@
   </section>
 
   <section class="story">
-    <div class="story-inner">
+    <div class="story-inner fade-up">
       <div class="story-tag">Our promise</div>
       <p class="story-text">Every dish leaving this kitchen is made the same day it's served. No frozen dough, no bottled sauce, no pasta from a packet. If we run out of something fresh, it comes off the menu for the night &mdash; it doesn't get replaced with a shortcut.</p>
     </div>
   </section>
 
   <section class="visit">
-    <div class="visit-inner">
+    <div class="visit-inner fade-up">
       <div class="visit-block">
         <p class="eyebrow">Find us</p>
         <h2 class="section-title">Visit the Kitchen</h2>
@@ -71,6 +107,13 @@
         <p class="address">14 Fornace Lane<br>Old Town Quarter<br>Mysuru, Karnataka</p>
         <p class="eyebrow">Contact</p>
         <p class="address">+91 00000 00000<br>hello@tavolarossa.example</p>
+        <iframe
+          src="https://maps.google.com/maps?q=Mysuru%2C%20Karnataka&z=14&output=embed"
+          width="100%" height="220"
+          style="border:0; border-radius:12px; margin-top:0.5rem;"
+          loading="lazy"
+          title="Map location">
+        </iframe>
       </div>
     </div>
   </section>
@@ -80,5 +123,16 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+  </script>
 </body>
 </html>
