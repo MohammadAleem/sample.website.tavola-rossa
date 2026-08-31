@@ -38,6 +38,9 @@
     font-weight: 500;
     margin: 0;
   }
+  /* Scroll-reveal — self-contained, works regardless of style.css version */
+  .fade-up { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.in-view { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
@@ -69,7 +72,7 @@
   </section>
 
   <section class="story">
-    <div class="story-inner">
+    <div class="story-inner fade-up">
       <div class="story-tag">How it works</div>
       <p class="story-text">Tell us the headcount and the occasion, we build a set menu around it. Every package includes a tasting call with the chef beforehand, so there are no surprises on the night.</p>
     </div>
@@ -80,7 +83,7 @@
       <p class="eyebrow eyebrow-dark">Packages</p>
       <h2 class="section-title">Pick Your Occasion</h2>
 
-      <div class="menu-grid">
+      <div class="menu-grid fade-up">
 
         <article class="dish-card">
           <div class="dish-photo">
@@ -131,5 +134,16 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+  </script>
 </body>
 </html>
